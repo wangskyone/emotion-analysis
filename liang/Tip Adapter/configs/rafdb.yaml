@@ -1,0 +1,36 @@
+# ------ root_path/dataset_name ------
+root_path: ''
+
+
+# ------ Load Cache and Features ------
+load_cache: False
+load_pre_feat: False
+
+# load_cache: True
+# load_pre_feat: True
+
+
+# ------ Hyperparamters ------
+search_hp: True
+# search_hp: False
+
+search_scale: [20, 3]
+search_step: [200, 20]
+
+init_beta: 1
+init_alpha: 1
+
+
+# ------ Basic Config ------
+dataset: 'rafdb'
+shots: -1
+backbone: 'ViT-B/16'
+
+lr:  0.0001
+lr_clip: 0.0001
+augment_epoch: 10
+train_epoch: 30
+
+train_batchsize: 256
+val_batchsize: 64
+test_batchsize: 64
