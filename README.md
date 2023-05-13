@@ -23,7 +23,7 @@ https://github.com/watersink/GENKI
   采用CrossEntropyLoss()损失函数、SGD优化、初始学习率为0.01,、动量因子0.5、Epochs为100。
   
 #### 运行
-  python == 3.8.8
+  '<python == 3.8.8>`
   torch == 1.13.0
   nohup python face.py &  运行实验
 
