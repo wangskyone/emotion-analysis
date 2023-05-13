@@ -1,0 +1,202 @@
+/home/wangqingyu/anaconda3/envs/wangqingyu/lib/python3.8/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: /home/wangqingyu/anaconda3/envs/wangqingyu/lib/python3.8/site-packages/torchvision/image.so: undefined symbol: _ZN2at4_ops19empty_memory_format4callEN3c108ArrayRefIlEENS2_8optionalINS2_10ScalarTypeEEENS5_INS2_6LayoutEEENS5_INS2_6DeviceEEENS5_IbEENS5_INS2_12MemoryFormatEEE
+  warn(f"Failed to load image Python extension: {e}")
+Loss  60.208481431007385 Epoch  0
+Accuracy on test set: 50 % [600/1200]    epoch: 0
+Loss  59.94150120019913 Epoch  1
+Accuracy on test set: 50 % [601/1200]    epoch: 1
+Loss  59.3052219748497 Epoch  2
+Accuracy on test set: 53 % [643/1200]    epoch: 2
+Loss  58.115289747714996 Epoch  3
+Accuracy on test set: 60 % [721/1200]    epoch: 3
+Loss  56.80462050437927 Epoch  4
+Accuracy on test set: 52 % [632/1200]    epoch: 4
+Loss  55.35763907432556 Epoch  5
+Accuracy on test set: 69 % [837/1200]    epoch: 5
+Loss  53.036077082157135 Epoch  6
+Accuracy on test set: 72 % [871/1200]    epoch: 6
+Loss  50.32408383488655 Epoch  7
+Accuracy on test set: 57 % [689/1200]    epoch: 7
+Loss  46.99077036976814 Epoch  8
+Accuracy on test set: 68 % [817/1200]    epoch: 8
+Loss  44.813466012477875 Epoch  9
+Accuracy on test set: 75 % [908/1200]    epoch: 9
+Loss  42.83483985066414 Epoch  10
+Accuracy on test set: 67 % [808/1200]    epoch: 10
+Loss  41.31091684103012 Epoch  11
+Accuracy on test set: 78 % [945/1200]    epoch: 11
+Loss  40.45542973279953 Epoch  12
+Accuracy on test set: 79 % [958/1200]    epoch: 12
+Loss  38.04174926877022 Epoch  13
+Accuracy on test set: 81 % [983/1200]    epoch: 13
+Loss  37.478057369589806 Epoch  14
+Accuracy on test set: 76 % [915/1200]    epoch: 14
+Loss  36.00734296441078 Epoch  15
+Accuracy on test set: 79 % [957/1200]    epoch: 15
+Loss  35.43528941273689 Epoch  16
+Accuracy on test set: 83 % [1001/1200]    epoch: 16
+Loss  34.093667179346085 Epoch  17
+Accuracy on test set: 76 % [921/1200]    epoch: 17
+Loss  33.58816382288933 Epoch  18
+Accuracy on test set: 82 % [990/1200]    epoch: 18
+Loss  32.6383341550827 Epoch  19
+Accuracy on test set: 79 % [954/1200]    epoch: 19
+Loss  31.354023471474648 Epoch  20
+Accuracy on test set: 85 % [1029/1200]    epoch: 20
+Loss  30.467140957713127 Epoch  21
+Accuracy on test set: 83 % [997/1200]    epoch: 21
+Loss  30.069625362753868 Epoch  22
+Accuracy on test set: 85 % [1020/1200]    epoch: 22
+Loss  28.523952066898346 Epoch  23
+Accuracy on test set: 85 % [1021/1200]    epoch: 23
+Loss  27.759196490049362 Epoch  24
+Accuracy on test set: 86 % [1033/1200]    epoch: 24
+Loss  27.062868624925613 Epoch  25
+Accuracy on test set: 82 % [995/1200]    epoch: 25
+Loss  26.554370939731598 Epoch  26
+Accuracy on test set: 81 % [978/1200]    epoch: 26
+Loss  25.560477286577225 Epoch  27
+Accuracy on test set: 85 % [1030/1200]    epoch: 27
+Loss  24.267656914889812 Epoch  28
+Accuracy on test set: 85 % [1028/1200]    epoch: 28
+Loss  24.099745266139507 Epoch  29
+Accuracy on test set: 83 % [1005/1200]    epoch: 29
+Loss  23.536842063069344 Epoch  30
+Accuracy on test set: 86 % [1037/1200]    epoch: 30
+Loss  21.911442160606384 Epoch  31
+Accuracy on test set: 85 % [1020/1200]    epoch: 31
+Loss  21.239544965326786 Epoch  32
+Accuracy on test set: 80 % [970/1200]    epoch: 32
+Loss  20.69325563311577 Epoch  33
+Accuracy on test set: 86 % [1032/1200]    epoch: 33
+Loss  19.63838968425989 Epoch  34
+Accuracy on test set: 85 % [1027/1200]    epoch: 34
+Loss  18.699805915355682 Epoch  35
+Accuracy on test set: 84 % [1014/1200]    epoch: 35
+Loss  17.487940557301044 Epoch  36
+Accuracy on test set: 86 % [1032/1200]    epoch: 36
+Loss  16.878186710178852 Epoch  37
+Accuracy on test set: 85 % [1021/1200]    epoch: 37
+Loss  15.749707538634539 Epoch  38
+Accuracy on test set: 86 % [1032/1200]    epoch: 38
+Loss  14.91307494789362 Epoch  39
+Accuracy on test set: 85 % [1020/1200]    epoch: 39
+Loss  14.24647943675518 Epoch  40
+Accuracy on test set: 84 % [1017/1200]    epoch: 40
+Loss  13.340898856520653 Epoch  41
+Accuracy on test set: 84 % [1010/1200]    epoch: 41
+Loss  11.901008930057287 Epoch  42
+Accuracy on test set: 85 % [1025/1200]    epoch: 42
+Loss  11.03552657365799 Epoch  43
+Accuracy on test set: 85 % [1025/1200]    epoch: 43
+Loss  10.78037953749299 Epoch  44
+Accuracy on test set: 85 % [1022/1200]    epoch: 44
+Loss  9.291512504220009 Epoch  45
+Accuracy on test set: 85 % [1023/1200]    epoch: 45
+Loss  9.14057669043541 Epoch  46
+Accuracy on test set: 85 % [1027/1200]    epoch: 46
+Loss  8.087086975574493 Epoch  47
+Accuracy on test set: 84 % [1019/1200]    epoch: 47
+Loss  8.783809829503298 Epoch  48
+Accuracy on test set: 80 % [971/1200]    epoch: 48
+Loss  7.214988082647324 Epoch  49
+Accuracy on test set: 84 % [1019/1200]    epoch: 49
+Loss  6.058669697493315 Epoch  50
+Accuracy on test set: 85 % [1021/1200]    epoch: 50
+Loss  5.521266772411764 Epoch  51
+Accuracy on test set: 85 % [1021/1200]    epoch: 51
+Loss  4.90056287497282 Epoch  52
+Accuracy on test set: 85 % [1027/1200]    epoch: 52
+Loss  4.354578632861376 Epoch  53
+Accuracy on test set: 85 % [1025/1200]    epoch: 53
+Loss  4.196407376322895 Epoch  54
+Accuracy on test set: 85 % [1023/1200]    epoch: 54
+Loss  3.4863767246715724 Epoch  55
+Accuracy on test set: 85 % [1020/1200]    epoch: 55
+Loss  3.8728604461066425 Epoch  56
+Accuracy on test set: 85 % [1020/1200]    epoch: 56
+Loss  3.06555710779503 Epoch  57
+Accuracy on test set: 86 % [1032/1200]    epoch: 57
+Loss  2.442514571826905 Epoch  58
+Accuracy on test set: 84 % [1012/1200]    epoch: 58
+Loss  2.127879722742364 Epoch  59
+Accuracy on test set: 84 % [1012/1200]    epoch: 59
+Loss  2.1222070169169456 Epoch  60
+Accuracy on test set: 85 % [1025/1200]    epoch: 60
+Loss  1.7838875078596175 Epoch  61
+Accuracy on test set: 85 % [1022/1200]    epoch: 61
+Loss  1.5239273210754618 Epoch  62
+Accuracy on test set: 85 % [1022/1200]    epoch: 62
+Loss  1.416898660827428 Epoch  63
+Accuracy on test set: 84 % [1017/1200]    epoch: 63
+Loss  1.2721502624917775 Epoch  64
+Accuracy on test set: 85 % [1028/1200]    epoch: 64
+Loss  1.1096241825725883 Epoch  65
+Accuracy on test set: 85 % [1023/1200]    epoch: 65
+Loss  0.9338527754880488 Epoch  66
+Accuracy on test set: 85 % [1022/1200]    epoch: 66
+Loss  0.9622676428989507 Epoch  67
+Accuracy on test set: 85 % [1026/1200]    epoch: 67
+Loss  0.9064550392795354 Epoch  68
+Accuracy on test set: 85 % [1023/1200]    epoch: 68
+Loss  0.782822206383571 Epoch  69
+Accuracy on test set: 85 % [1029/1200]    epoch: 69
+Loss  0.7518323720432818 Epoch  70
+Accuracy on test set: 86 % [1032/1200]    epoch: 70
+Loss  0.705858989735134 Epoch  71
+Accuracy on test set: 85 % [1024/1200]    epoch: 71
+Loss  0.639119828119874 Epoch  72
+Accuracy on test set: 85 % [1023/1200]    epoch: 72
+Loss  0.5898229888407513 Epoch  73
+Accuracy on test set: 85 % [1021/1200]    epoch: 73
+Loss  0.5522925116238184 Epoch  74
+Accuracy on test set: 85 % [1021/1200]    epoch: 74
+Loss  0.4883980127633549 Epoch  75
+Accuracy on test set: 85 % [1023/1200]    epoch: 75
+Loss  0.4489858075976372 Epoch  76
+Accuracy on test set: 86 % [1034/1200]    epoch: 76
+Loss  0.4485737174982205 Epoch  77
+Accuracy on test set: 85 % [1025/1200]    epoch: 77
+Loss  0.38928202248644084 Epoch  78
+Accuracy on test set: 85 % [1026/1200]    epoch: 78
+Loss  0.3806659091205802 Epoch  79
+Accuracy on test set: 86 % [1032/1200]    epoch: 79
+Loss  0.37318729562684894 Epoch  80
+Accuracy on test set: 85 % [1023/1200]    epoch: 80
+Loss  0.3378175831749104 Epoch  81
+Accuracy on test set: 85 % [1023/1200]    epoch: 81
+Loss  0.3681529822642915 Epoch  82
+Accuracy on test set: 85 % [1026/1200]    epoch: 82
+Loss  0.3263304224819876 Epoch  83
+Accuracy on test set: 85 % [1027/1200]    epoch: 83
+Loss  0.30757224920671433 Epoch  84
+Accuracy on test set: 85 % [1022/1200]    epoch: 84
+Loss  0.3059349771065172 Epoch  85
+Accuracy on test set: 85 % [1020/1200]    epoch: 85
+Loss  0.262137819401687 Epoch  86
+Accuracy on test set: 85 % [1022/1200]    epoch: 86
+Loss  0.261751977406675 Epoch  87
+Accuracy on test set: 84 % [1018/1200]    epoch: 87
+Loss  0.28933925059391186 Epoch  88
+Accuracy on test set: 85 % [1020/1200]    epoch: 88
+Loss  0.24268352476065047 Epoch  89
+Accuracy on test set: 85 % [1024/1200]    epoch: 89
+Loss  0.22733747045276687 Epoch  90
+Accuracy on test set: 85 % [1021/1200]    epoch: 90
+Loss  0.2248601737082936 Epoch  91
+Accuracy on test set: 85 % [1025/1200]    epoch: 91
+Loss  0.20809781918069348 Epoch  92
+Accuracy on test set: 84 % [1018/1200]    epoch: 92
+Loss  0.20929701809654944 Epoch  93
+Accuracy on test set: 84 % [1018/1200]    epoch: 93
+Loss  0.19283280154922977 Epoch  94
+Accuracy on test set: 85 % [1025/1200]    epoch: 94
+Loss  0.19844677514629439 Epoch  95
+Accuracy on test set: 85 % [1024/1200]    epoch: 95
+Loss  0.17761181521927938 Epoch  96
+Accuracy on test set: 84 % [1018/1200]    epoch: 96
+Loss  0.17906298323214287 Epoch  97
+Accuracy on test set: 85 % [1028/1200]    epoch: 97
+Loss  0.17971558988210745 Epoch  98
+Accuracy on test set: 85 % [1025/1200]    epoch: 98
+Loss  0.16565067053306848 Epoch  99
+Accuracy on test set: 85 % [1020/1200]    epoch: 99
