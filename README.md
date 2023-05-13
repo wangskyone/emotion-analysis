@@ -33,4 +33,5 @@ https://github.com/watersink/GENKI
   运行实验  `nohup python face.py &`
 
 #### 2.5 实验结果
-  50个Epoch之后模型收敛，达到85%的准确率，最高准确率为86%。
+  50个Epoch之后模型收敛，达到85%的准确率，最高准确率为86%。  
+  具体Loss和ACC的变化趋势见`Raw.out`。
