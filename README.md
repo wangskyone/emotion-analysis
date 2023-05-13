@@ -25,7 +25,7 @@ https://github.com/watersink/GENKI
   `fc2`的输出做为最终模型的输出。
   
 #### 2.3 实验设计
-  采用`CrossEntropyLoss()`损失函数、`SGD`优化、初始学习率为`0.01`,、动量因子`0.5`、`Epochs`为`100`。
+  采用CrossEntropyLoss()损失函数、SGD优化、初始学习率为0.01,、动量因子0.5、Epochs为100。
   
 #### 2.4 运行
   `python == 3.8.8`  
@@ -33,4 +33,4 @@ https://github.com/watersink/GENKI
   运行实验  `nohup python face.py &`
 
 #### 2.5 实验结果
-  `50`个Epoch之后模型收敛，达到`85%`的准确率，最高准确率为`86%`。
+  50个Epoch之后模型收敛，达到85%的准确率，最高准确率为86%。
