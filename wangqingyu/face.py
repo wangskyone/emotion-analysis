@@ -199,7 +199,7 @@ def get_model():
     elif args.model == 'inception':
         model = InceptionResnetV1(pretrained='vggface2', classify=True, num_classes=2)
     elif args.model == 'resnet50':
-        model = resnet50_face_sfew_dag("resnet50_face_sfew_dag.pth")
+        model = resnet50_face_sfew_dag("resnet50_face_sfew_dag.pth",num_classes=2)
     elif args.model == 'resnet50-imgnet':
         model = Resnet50()
     return model
