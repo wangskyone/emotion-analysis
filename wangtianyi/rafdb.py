@@ -191,6 +191,23 @@ def draw_pic():
                           pdf_save_path="Confusion_Matrix_on_rafdb.jpg",
                           dpi=300)
 
+def draw_num_each_class():
+    dataloader = load_data("rafdb/rafdb/train")
+    labels = []
+    for batch_idx, (input, target) in tqdm(enumerate(dataloader), total=len(dataloader)):
+        labels.extend(target.numpy())
+
+    labels = np.array(labels)
+    # draw
+    labels_name = ['Anger', 'Disgust', 'Fear', 'Happiness', 'Neutral', 'Sadness', 'Surprise']
+    plt.figure(figsize=(10, 5))
+    plt.bar(labels_name, np.bincount(labels), width=0.5)
+    plt.xlabel("Class")
+    plt.ylabel("Number")
+    plt.title("Number of each class on rafdb")
+    plt.show()
+    plt.savefig("Number_of_each_class_on_rafdb.jpg", dpi=300)
+
 
 if __name__ == '__main__':
     Epochs = 10
