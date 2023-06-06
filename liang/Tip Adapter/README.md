@@ -33,8 +33,6 @@ Best Acc: 82.07, Acc: 82.72
 以上所有结果都是设定为30个epoch时完成的，Shot的选择遵循原论文中的生成少样本数据集的方法
 
 3 探索微调adapter以外的层
-微调visual模块：nan
+微调visual模块：78%左右（使用了Balanced CrossEntropy策略）
 
-微调Transformer模块：nan
-
-微调ln_final：准确率几乎没有变化
+原始Tip-Adapter作者的README在original_README.md
