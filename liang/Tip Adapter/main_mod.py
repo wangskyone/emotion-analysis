@@ -19,6 +19,29 @@ from utils import *
 writer = SummaryWriter(log_dir='./logs/{}'.format(datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")),
                        comment='Tip-Adapter')
 
+
+
+class ClassBalancedCrossEntropyLoss(nn.Module):
+    def __init__(self, num_classes, device):
+        super().__init__()
+        self.num_classes = num_classes
+        self.device = device
+        self.loss_fn = nn.CrossEntropyLoss(reduction='none')
+        self.class_weights = self.get_class_weights()
+
+    def get_class_weights(self):
+        class_counts = torch.tensor([705, 717, 281, 4772, 2524, 1982, 1290], device=self.device, dtype=torch.float32)
+        total_samples = class_counts.sum()
+        class_weights = total_samples / (self.num_classes * class_counts)
+        return class_weights
+    
+    def forward(self, inputs, targets):
+        ce_loss = self.loss_fn(inputs, targets)
+        weights = self.class_weights[targets]
+        balanced_ce_loss = (weights * ce_loss).mean()
+        return balanced_ce_loss
+
+
 def get_arguments():
 
     parser = argparse.ArgumentParser()
@@ -78,26 +101,28 @@ def run_tip_adapter(cfg, cache_keys, cache_values, val_features, val_labels, tes
 
 def run_tip_adapter_F(cfg, cache_keys, cache_values, val_features, val_labels, test_features, test_labels, clip_weights, clip_model, train_loader_F):
     
+    loss_fn = ClassBalancedCrossEntropyLoss(num_classes=7, device='cuda:0')
+
     # Enable the cached keys to be learnable
     adapter = nn.Linear(cache_keys.shape[0], cache_keys.shape[1], bias=False).to(clip_model.dtype).cuda()
     adapter.weight = nn.Parameter(cache_keys.t())
 
-    for param in clip_model.parameters():
-        param.requires_grad = False
+    # for param in clip_model.parameters():
+    #     param.requires_grad = False
 
-    for name, param in clip_model.named_parameters():
-        # if 'resblocks.11' in name:
-        # if 'visual' in name:
-        if 'ln_final' in name:
-            param.requires_grad = True
+    # for name, param in clip_model.named_parameters():
+    #     # if 'resblocks.11' in name:
+    #     # if 'visual' in name:
+    #     if 'ln_final' in name:
+    #         param.requires_grad = True
 
-    params = list(clip_model.named_parameters())
-    adapter_params, clip_model_params = adapter.parameters(), filter(lambda p: p.requires_grad, clip_model.parameters())
+    # params = list(clip_model.named_parameters())
+    # adapter_params, clip_model_params = adapter.parameters(), filter(lambda p: p.requires_grad, clip_model.parameters())
 
-    param_groups = [
-        {'params': adapter_params, 'lr': cfg['lr'], 'eps': 1e-4},
-        {'params': clip_model_params, 'lr': cfg['lr_clip'], 'eps': 1e-4},
-    ]
+    # param_groups = [
+    #     {'params': adapter_params, 'lr': cfg['lr'], 'eps': 1e-4},
+    #     {'params': clip_model_params, 'lr': cfg['lr_clip'], 'eps': 1e-4},
+    # ]
     # optimizer = torch.optim.AdamW(param_groups)
 
     optimizer = torch.optim.AdamW(adapter.parameters(), lr=cfg['lr'], eps=1e-4)
@@ -131,15 +156,16 @@ def run_tip_adapter_F(cfg, cache_keys, cache_values, val_features, val_labels, t
             clip_logits = 100. * image_features @ clip_weights
             tip_logits = clip_logits + cache_logits * alpha
 
-            loss = F.cross_entropy(tip_logits, target)
+            # loss = F.cross_entropy(tip_logits, target)
+            loss_balanced = loss_fn(tip_logits, target)
 
             acc = cls_acc(tip_logits, target)
             correct_samples += acc / 100 * len(tip_logits)
             all_samples += len(tip_logits)
-            loss_list.append(loss.item())
+            loss_list.append(loss_balanced.item())
 
             optimizer.zero_grad()
-            loss.backward()
+            loss_balanced.backward()
             optimizer.step()
             scheduler.step()
 
